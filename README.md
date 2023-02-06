@@ -18,7 +18,7 @@ In a React app, use the Checkbox Button Table or Multi Select Table components:
 
 #### Table props
 
-| Name        | Description      
+| Name        | Example Data      
 | ----------- | -----------      
 | Users        |  {id: 1, Name:"John", Mobile: '8899 7654', Expiry: 'Dec 2022',Penalty: '$606'}
 | data1    | {id: 1,selected: false,Name: "Blue Ocean", BRN: "1-770-736",Expiry: "Dec 2022",Penalty: "$500"}       
