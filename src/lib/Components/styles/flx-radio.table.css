@@ -1,0 +1,248 @@
+/* -------------Table Style-------------- */
+.table-container{
+    padding: 0 10px;
+  }
+  .table {
+    font-family: 'avenir-heavy', sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    line-height: 1.75;
+    border-radius: 16px;
+    border-collapse: separate !important;
+    padding: 0 16px 0 16px;
+    border-spacing: 0;
+    box-shadow: rgba(149, 157, 165, 0.493) 0px 8px 24px;
+  }
+  
+  
+  td, th {
+    border: 1px solid #E1E1E1;
+    text-align: left;
+    padding: 8px;
+    border-left: none;
+    border-right: none;
+  }
+  
+  tr.last {
+     border-bottom: none;
+  }
+  
+  td.last ,th.last  {
+    border-bottom: none;
+  }
+  .table th:first-child {
+    -moz-border-radius: 16px 0 0 0;
+    -webkit-border-radius: 16px 0 0 0;
+    border-radius: 16px 0 0 0;
+  }
+  .table th:last-child {
+    -moz-border-radius: 0 16px 0 0;
+    -webkit-border-radius: 0 16px 0 0;
+    border-radius: 0 16px 0 0;
+  }
+  .table th:only-child{
+    -moz-border-radius: 16px 16px 0 0;
+    -webkit-border-radius: 16px 16px 0 0;
+    border-radius: 16px 16px 0 0;
+  }
+  .table-header{
+    letter-spacing: 0;
+    background: #f1f1f1 ;
+  }
+  
+  .table-body{
+    letter-spacing: 0.1;
+  }
+  
+  .table-body .selected{
+    background: #EFEDFD;
+  
+  }
+  
+  .xl{
+    font-size: 20px;;
+  }
+  
+  .md{
+    font-size: 18px;;
+  }
+  
+  .xs{
+    font-size: 16px;;
+  }
+  .check-box{
+  padding-right: 20px;
+  }
+  
+  .btn-radio::selection{
+    border: 3px solid #EFEDFD;
+  }
+  
+  .btn-checkbox{
+    background: #EFEDFD;
+    width: 24px;
+    height: 24px;
+    padding: 24px;
+  }
+  
+  /* The container */
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 10px;
+    margin-bottom: 24px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    /* background-color: #eee; */
+    border-radius: 5px;;
+    border: 1px solid rgba(0, 0, 0, 0.226);
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+    border: 1px solid #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  /* Radio button style*/
+  .radio-btn:checked,
+  .radio-btn:not(:checked) {
+      position: absolute;
+      left: -9999px;
+  }
+  .radio-btn:checked + label,
+  .radio-btn:not(:checked) + label
+  {
+      position: relative;
+      padding-left: 28px;
+      cursor: pointer;
+      line-height: 20px;
+      color: #666;
+  }
+  .radio-btn:checked + label:before,
+  .radio-btn:not(:checked) + label:before {
+      content: '';
+      position: absolute;
+      left: 10;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      border: 1px solid #0000006c;
+      border-radius: 100%;
+      background: #fff;
+  }
+  .radio-btn:checked + label:after,
+  .radio-btn:not(:checked) + label:after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: #fff;
+      border: 6px solid #4a1bcc;
+      position: absolute;
+      top: 0px;
+      border-radius: 100%;
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+  }
+  .radio-btn:not(:checked) + label:after {
+      opacity: 0;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+  }
+  .radio-btn:checked + label:after {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+  } 
+  
+  .table-body td span{
+    display: none;
+  }
+  
+  @media screen and (max-width:767px) {
+    .table{
+      padding: 0;
+    }
+  
+    table tr > *:not(.check-box){
+        display: table-row;
+        padding: 8px;
+    }
+    table tr {
+        display: table-column;
+    }
+  
+    table tr:nth-child(n) {  
+      display: table-row;
+    }
+  
+    .table-body tr{
+      border-bottom: 1px solid #E1E1E1!important;
+    }
+  
+    .table-header{
+      display: none;
+    }
+    td span{
+      font-weight: bold;
+      width: 40% ; 
+      /* display: inline-block;  */
+    }
+    .check-box{
+      border: none;
+    }
+    .table-body td span{
+      display:inline ;
+    }
+  
+  }
+
+  
+  
