@@ -10,10 +10,10 @@ In a React app, use the Checkbox Button Table or Multi Select Table components:
 `import { SelectRadioTableComponent } from 'flx-table'`  
 `import { SelectTableComponent } from 'flx-table'`  
 
- "  <div className="App">
+    `<div className="App">
       <SelectTableComponent List={Users}  />
       <SelectRadioTableComponent List={data1} />
-    </div> "
+    </div>`
 
 #### Table props
 
