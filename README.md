@@ -11,7 +11,6 @@ In a React app, use the Checkbox Button Table or Multi Select Table components:
 `import { SelectTableComponent } from 'flx-table'`  
 
    <div className="App">
-      <h1>Table</h1>
       <SelectTableComponent List={Users}  />
       <SelectRadioTableComponent List={data1} />
     </div>
